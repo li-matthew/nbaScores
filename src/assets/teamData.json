@@ -1,0 +1,12 @@
+[
+    {
+        "team": "Atlanta Hawks",
+        "primary": "#E03A3E",
+        "secondary": "#C1D32F"
+    },
+    {
+        "team": "Philadelphia 76ers",
+        "primary": "#006BB6",
+        "secondary": "#ED174C"
+    }
+]

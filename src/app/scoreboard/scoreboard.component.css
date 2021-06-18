@@ -1,0 +1,26 @@
+.games {
+    text-align: center;
+    margin: auto;
+}
+
+.playingTeam {
+    float: left;
+}
+
+.score {
+    float: right;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.scoreContainer {
+    width: 50%;
+    margin: auto;
+}
+
+h2 {
+    margin-bottom: 0;
+}
