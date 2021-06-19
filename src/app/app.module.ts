@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list'
 import { MatDividerModule } from '@angular/material/divider'
+import { CommonModule } from '@angular/common';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +31,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatIconModule,
     MatGridListModule,
     MatDividerModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,21 +9,26 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./scoreboard.component.css']
 })
 export class ScoreboardComponent implements OnInit {
-  games: any[] = [];
+  games: Array<any> = [];
   now = new Date()
   date: Date = this.now;
   formatDate = '';
-  teamData: any[] = [];
-  
-  constructor(private scoreService: ScoreService) {
+  teamData: Array<any> = [];
+  colors: Array<any> = [];
+  constructor(private scoreService: ScoreService, private httpClient: HttpClient ) {
     
    }
 
   ngOnInit(): void {
-    console.log(this.now)
+    // console.log(this.now)
     this.games = this.scoreService.getScores(this.now);
+    // this.colors = this.scoreService.getScores(this.now)[1];
     this.formatDate = formatDate(this.now, 'fullDate', 'en_US')
-    console.log(this.scoreService.getScores(this.now))
+    for (let game of this.teamData) {
+      console.log(game)
+    }
+    console.log(this.games)
+    
   }
 
   nextDay() {

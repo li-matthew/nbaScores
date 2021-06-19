@@ -24,6 +24,7 @@
         <span class='score'>{{game.visitor_team_score}}</span><br>
         {{game.time + ' ' + game.status}}<br>
         <mat-divider></mat-divider> -->
+        <div class='gameContainer' [ngStyle]="{borderImage: 'linear-gradient(to right,'+game.homeColor + ',' + game.visitorColor+') 1'}">
             <mat-grid-list cols='3' rowHeight='100px'>
                 <mat-grid-tile>
                     <h2 class='playingTeam'>{{game.home_team.full_name}}</h2>
@@ -37,9 +38,10 @@
                 </mat-grid-tile>
             </mat-grid-list>
             <h3>{{game.time + ' ' + game.status}}</h3>
-            <span *ngIf='!last'>
+            <!-- <span *ngIf='!last'>
                 <mat-divider></mat-divider>
-            </span>
+            </span> -->
+        </div>
         </a>
     </div>
 </div>
