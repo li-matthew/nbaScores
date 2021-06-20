@@ -200,40 +200,28 @@ export class ScoreService {
   }
 
   getScores(date: Date) {
+    this.games = [];
+    this.teams = [];
+    this.colors = [];
     var url = 'https://www.balldontlie.io/api/v1/games?start_date=' + formatDate(date, 'yyyy-MM-dd', 'en_US') + '&end_date=' + formatDate(date, 'yyyy-MM-dd', 'en_US');
     this.httpClient.get<any>(url).subscribe(
       data => {
+        console.log(data)
         var temp = JSON.parse(JSON.stringify(data)).data;
-        // console.log(temp)
-        if (this.games.length > 0) {
-          this.games = [];
-          this.teams = [];
-          this.colors = [];
-        }
+        console.log(temp)
+        // if (this.games.length > 0) {
+        //   this.games = [];
+        //   this.teams = [];
+        //   this.colors = [];
+        // }
         for (let game in temp) {
           temp[game].homeColor = this.teamData.find(x => x.team === temp[game].home_team.full_name).primary;
           temp[game].visitorColor = this.teamData.find(x => x.team === temp[game].visitor_team.full_name).primary
           this.games.push(temp[game])
         }
-        // for (let team in this.teams) {
-        //   this.colors.push(this.teamData.find(x => x.team === this.teams[team]).primary)
-        // }
       }
     )
-
+      console.log(this.games)
     return this.games
-  }
-
-  getColors() {
-    // console.log(this.teams)
-    // for (let team in this.teamData) {
-    //   console.log(this.teamData.find(x => x.team === "Atlanta Hawks"))
-    // }
-    // this.httpClient.get<any>("assets/teamData.json").subscribe(data => {
-    //   for (let team in data) {
-    //     this.teamData.push(data[team])
-    //   }
-    //   console.log(this.teams.length)
-    // })
   }
 }

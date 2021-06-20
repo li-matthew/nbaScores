@@ -37,7 +37,11 @@
                     <h2 class='playingTeam'>{{game.visitor_team.full_name}}</h2>
                 </mat-grid-tile>
             </mat-grid-list>
+            <span *ngIf="game.time !== ''">
+                <mat-progress-bar mode='indeterminate'></mat-progress-bar>
+            </span>
             <h3>{{game.time + ' ' + game.status}}</h3>
+            
             <!-- <span *ngIf='!last'>
                 <mat-divider></mat-divider>
             </span> -->

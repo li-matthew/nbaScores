@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list'
 import { MatDividerModule } from '@angular/material/divider'
 import { CommonModule } from '@angular/common';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +33,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatGridListModule,
     MatDividerModule,
     CommonModule,
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

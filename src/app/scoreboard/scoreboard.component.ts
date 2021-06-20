@@ -20,19 +20,14 @@ export class ScoreboardComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    // console.log(this.now)
     this.games = this.scoreService.getScores(this.now);
-    // this.colors = this.scoreService.getScores(this.now)[1];
     this.formatDate = formatDate(this.now, 'fullDate', 'en_US')
     for (let game of this.teamData) {
       console.log(game)
-    }
-    console.log(this.games)
-    
+    }  
   }
 
   nextDay() {
-    
     this.now.setDate(this.now.getDate() + 1)
     console.log(this.now)
     this.ngOnInit()
