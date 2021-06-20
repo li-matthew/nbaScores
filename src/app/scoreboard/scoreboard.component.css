@@ -9,6 +9,7 @@
 
 .score {
     float: right;
+    font-weight: 400;
 }
 
 .title {
@@ -34,4 +35,8 @@ h2 {
 mat-progress-bar {
     width: 25%;
     margin: auto;
+}
+
+.winner {
+    font-weight: bold;
 }

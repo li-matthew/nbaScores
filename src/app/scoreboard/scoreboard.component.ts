@@ -15,16 +15,13 @@ export class ScoreboardComponent implements OnInit {
   formatDate = '';
   teamData: Array<any> = [];
   colors: Array<any> = [];
-  constructor(private scoreService: ScoreService, private httpClient: HttpClient ) {
-    
-   }
+  constructor(private scoreService: ScoreService, private httpClient: HttpClient) {
+
+  }
 
   ngOnInit(): void {
     this.games = this.scoreService.getScores(this.now);
     this.formatDate = formatDate(this.now, 'fullDate', 'en_US')
-    for (let game of this.teamData) {
-      console.log(game)
-    }  
   }
 
   nextDay() {
@@ -39,5 +36,5 @@ export class ScoreboardComponent implements OnInit {
     this.ngOnInit()
   }
 
-  
+
 }
