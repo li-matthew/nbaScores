@@ -1,0 +1,29 @@
+.players {
+    margin: auto;
+    width: 50%;
+}
+
+.playerList {
+    float: left;
+}
+
+.playerStats {
+    float: right;
+}
+
+#info {
+    text-align: right;
+}
+
+.title {
+    text-align: center;
+}
+
+mat-grid-tile {
+    margin: auto;
+}
+
+mat-paginator {
+    display: flex;
+    justify-content: center;
+}

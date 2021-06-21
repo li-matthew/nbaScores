@@ -8,19 +8,23 @@ import { MatGridListModule } from '@angular/material/grid-list'
 import { MatDividerModule } from '@angular/material/divider'
 import { CommonModule } from '@angular/common';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PlayerListComponent } from './player-list/player-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScoreboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    PlayerListComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +38,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatDividerModule,
     CommonModule,
     MatProgressBarModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

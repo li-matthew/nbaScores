@@ -20,6 +20,7 @@
 .scoreContainer {
     width: 50%;
     margin: auto;
+    min-width: 600px;
 }
 
 h2 {

@@ -17,6 +17,7 @@
         </mat-grid-tile>
     </mat-grid-list>
     <div class='games'>
+        
         <a *ngFor='let game of games'>
             <div class='gameContainer'
                 [ngStyle]="{borderImage: 'linear-gradient(to right,'+game.homeColor + ',' + game.visitorColor+') 1'}">
@@ -41,5 +42,6 @@
                 <h3>{{game.time + ' ' + game.status}}</h3>
             </div>
         </a>
+        <!-- <h2 *ngIf="games.length === 0">No Games</h2> -->
     </div>
 </div>

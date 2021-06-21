@@ -1,0 +1,32 @@
+<mat-grid-list cols='6' rowHeight='100px'>
+    <mat-grid-tile [colspan]='6'>
+        <h1 class='title'>
+            PLAYERS
+        </h1>
+    </mat-grid-tile>
+</mat-grid-list>
+<mat-paginator [pageSize]='10' [pageSizeOptions]='[5, 10, 25, 100]'></mat-paginator>
+<div class='players'>
+    <div class='playerList'>
+        <a *ngFor='let player of players; let last = last' (click)='onSelect(player)'>
+            <span>{{player.first_name + ' ' + player.last_name}}</span><br>
+            <mat-divider *ngIf="!last"></mat-divider>
+        </a>
+        
+    </div>
+    
+    <div *ngIf='selectedPlayer' class='playerStats'>
+        <h2 id='info'>Info</h2>
+            <span>{{selectedPlayer.first_name + ' ' + selectedPlayer.last_name}}</span>
+    </div>
+    <!-- <table matSort (matSortChange)="sortData($event)">
+        <tr>
+            <th mat-sort-header='name'>Name</th>
+        </tr>
+        <tr *ngFor='let player of players'>
+            <td>{{player.first_name}}</td>
+        </tr>
+    </table> -->
+    <!-- </div> -->
+    
+</div>
