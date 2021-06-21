@@ -19,7 +19,7 @@ export class ScoreService {
     httpClient.get(this.teamDataURL).subscribe(data => {
       this.teamData = JSON.parse(JSON.stringify(data))
     })
-    console.log(this.teamData)
+    // console.log(this.teamData)
   }
 
   getScores(date: Date) {
@@ -29,7 +29,7 @@ export class ScoreService {
     var url = 'https://www.balldontlie.io/api/v1/games?start_date=' + formatDate(date, 'yyyy-MM-dd', 'en_US') + '&end_date=' + formatDate(date, 'yyyy-MM-dd', 'en_US');
     this.httpClient.get<any>(url).subscribe(
       data => {
-        console.log(data)
+        // console.log(data)
         var temp = JSON.parse(JSON.stringify(data)).data;
         for (let game in temp) {
           temp[game].homeColor = this.teamData.find(x => x.team === temp[game].home_team.full_name).primary;

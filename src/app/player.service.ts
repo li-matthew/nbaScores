@@ -18,6 +18,7 @@ export class PlayerService {
         console.log(temp)
         // this.players = temp
         for (let player in temp) {
+          // console.log(temp[player].full_name)
           this.players.push(temp[player])
         }
       }
