@@ -17,7 +17,7 @@
         </mat-grid-tile>
     </mat-grid-list>
     <div class='games'>
-        
+
         <a *ngFor='let game of games'>
             <div class='gameContainer'
                 [ngStyle]="{borderImage: 'linear-gradient(to right,'+game.homeColor + ',' + game.visitorColor+') 1'}">
@@ -31,15 +31,18 @@
                         <h2>&nbsp;-&nbsp;</h2>
                         <h2 class='score' [ngClass]="{winner: game.visitor_team_score > game.home_team_score}">
                             {{game.visitor_team_score}}</h2>
+                        
                     </mat-grid-tile>
                     <mat-grid-tile>
                         <h2 class='playingTeam'>{{game.visitor_team.full_name}}</h2>
                     </mat-grid-tile>
+                    
                 </mat-grid-list>
+                
+                <h3>{{game.time + ' ' + game.status}}</h3>
                 <span *ngIf="game.time !== ''">
                     <mat-progress-bar mode='indeterminate'></mat-progress-bar>
                 </span>
-                <h3>{{game.time + ' ' + game.status}}</h3>
             </div>
         </a>
         <!-- <h2 *ngIf="games.length === 0">No Games</h2> -->

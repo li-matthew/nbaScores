@@ -36,11 +36,13 @@ h2 {
     border: 5px solid;
     /* border-radius: 10px; */
     margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 mat-progress-bar {
     width: 25%;
     margin: auto;
+    height: 1px;
 }
 
 .winner {
@@ -53,4 +55,5 @@ button {
 
 h3 {
     color: white;
+    margin-bottom: 0;
 }
